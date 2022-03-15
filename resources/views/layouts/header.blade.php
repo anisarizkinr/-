@@ -20,7 +20,7 @@
 								<li><a href="{{url('/pelanggan')}}">Pelanggan</a>
 								</li>
 								<li><a href="{{url('/pegawai')}}">Pegawai</a></li>
-								<li><a href="{{url('/suplier')}}">SUplier</a>
+								<li><a href="{{url('/supplier')}}">Supplier</a>
 								</li>
 								<li>
 									<div class="header-icons">

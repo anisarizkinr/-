@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\PelangganController;
+use App\Http\Controllers\PegawaiController;
+use App\Http\Controllers\SupplierController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +22,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/home',[PageController::class, 'home']);
-Route::get('/barang',[PageController::class, 'barang']);
-Route::get('/pelanggan',[PageController::class, 'pelanggan']);
-Route::get('/pegawai',[PageController::class, 'pegawai']);
-Route::get('/suplier',[PageController::class, 'suplier']);
+Route::get('/barang',[BarangController::class, 'barang']);
+Route::get('/pelanggan',[PelangganController::class, 'pelanggan']);
+Route::get('/pegawai',[PegawaiController::class, 'pegawai']);
+Route::get('/supplier',[SupplierController::class, 'supplier']);

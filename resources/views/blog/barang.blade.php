@@ -26,7 +26,7 @@
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="breadcrumb-text">
 						<p>We sale fresh fruits</p>
-						<h1>About Us</h1>
+						<h1>Barang</h1>
 					</div>
 				</div>
 			</div>
