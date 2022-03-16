@@ -19,8 +19,8 @@
 	</div>
 	<!-- end search arewa -->
 	
-	<!-- breadcrumb-section -->
-	<div class="breadcrumb-section breadcrumb-bg">
+		<!-- breadcrumb-section -->
+		<div class="breadcrumb-section breadcrumb-bg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
@@ -33,6 +33,51 @@
 		</div>
 	</div>
 	<!-- end breadcrumb section -->
+
+	<!-- tabel daftar barang -->
+	
+	<div class="mt-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-title">
+						<h3>Fresh <span class="orange-text">Product</span></h3>
+						<p>Buah Buah Segar yang di petik langsung dari pohonya</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="daftar barang">
+      <div class="container">
+        <div class="row">
+          <table class="table table-bordered">
+		        <thead>
+			        <tr>
+              		  <th>id</th>
+				      <th>Barang</th>
+				      <th>Gambar</th>
+					  <th>Deskripsi</th>	
+              		  <th>Harga</th>		
+			        </tr>
+		        </thead>
+		        <tbody>
+            @foreach($daftar as $d)
+			        <tr>
+				      <td>{{ $d->id }}</td>
+              		  <td>{{ $d->barang }}</td>
+              		  <td><img src="{{$d->gambar}}" width='250' heigth='250'></td>
+						<td>{{ $d->deskripsi }}</td>
+              		  <td>{{ $d->harga }}</td>
+			        </tr>
+            @endforeach
+		        </tbody>
+	        </table>
+        </div>
+    </div>
+</div>
+<!-- end tabel daftar barang -->
+
 
 	<!-- featured section -->
 	<div class="feature-bg">

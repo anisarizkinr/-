@@ -9,8 +9,5 @@ class PageController extends Controller
     public function home(){
         return view('blog.home', ['title'=> 'Home']);
     }
-   
-   
-   
-    
+     
 }
