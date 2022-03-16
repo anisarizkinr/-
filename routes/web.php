@@ -24,5 +24,6 @@ Route::get('/', function () {
 Route::get('/home',[PageController::class, 'home']);
 Route::get('/barang',[BarangController::class, 'barang']);
 Route::get('/pelanggan',[PelangganController::class, 'pelanggan']);
+Route::get('/pelanggan1',[PelangganController::class, 'pelanggan1']);
 Route::get('/pegawai',[PegawaiController::class, 'pegawai']);
 Route::get('/supplier',[SupplierController::class, 'supplier']);

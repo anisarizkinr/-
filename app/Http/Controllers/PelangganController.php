@@ -11,4 +11,8 @@ class PelangganController extends Controller
         $data = Pelanggan::all();
         return view('blog.pelanggan',['title'=> 'Pelanggan','daftar'=> $data]);
     }
+    public function pelanggan1(){
+        $data = Pelanggan::paginate(3);
+        return view('blog.pelanggan',['title'=> 'Pelanggan','daftar'=> $data]);
+    }
 }
