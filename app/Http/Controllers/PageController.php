@@ -9,16 +9,16 @@ class PageController extends Controller
     public function home(){
         return view('blog.home', ['title'=> 'Home']);
     }
-    public function about(){
-        return view('blog.about', ['title'=> 'About']);
+    public function barang(){
+        return view('blog.about', ['title'=> 'Barang']);
     }
-    public function contact(){
-        return view('blog.contact', ['title'=> 'Contact']);
+    public function pelanggan(){
+        return view('blog.contact', ['title'=> 'Pelanggan']);
     }
-    public function news(){
-        return view('blog.news', ['title'=> 'News']);
+    public function pegawai(){
+        return view('blog.news', ['title'=> 'Pegawai']);
     }
-    public function shop(){
-        return view('blog.shop', ['title'=> 'Shops']);
+    public function suplier(){
+        return view('blog.shop', ['title'=> 'Suplier']);
     }
 }

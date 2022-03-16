@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/home',[PageController::class, 'home']);
-Route::get('/about',[PageController::class, 'about']);
-Route::get('/contact',[PageController::class, 'contact']);
-Route::get('/news',[PageController::class, 'news']);
-Route::get('/shop',[PageController::class, 'shop']);
+Route::get('/barang',[PageController::class, 'barang']);
+Route::get('/pelanggan',[PageController::class, 'pelanggan']);
+Route::get('/pegawai',[PageController::class, 'pegawai']);
+Route::get('/suplier',[PageController::class, 'suplier']);

@@ -16,11 +16,11 @@
 							<ul>
 								<li class="current-list-item"><a href="{{url('/home')}}">Home</a>
 								</li>
-								<li><a href="{{url('/about')}}">About</a></li>
-								<li><a href="{{url('/news')}}">News</a>
+								<li><a href="{{url('/barang')}}">Barang</a></li>
+								<li><a href="{{url('/pelanggan')}}">Pelanggan</a>
 								</li>
-								<li><a href="{{url('/contact')}}">Contact</a></li>
-								<li><a href="{{url('/shop')}}">Shop</a>
+								<li><a href="{{url('/pegawai')}}">Pegawai</a></li>
+								<li><a href="{{url('/suplier')}}">SUplier</a>
 								</li>
 								<li>
 									<div class="header-icons">
