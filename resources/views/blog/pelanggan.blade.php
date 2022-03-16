@@ -25,8 +25,8 @@
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="breadcrumb-text">
-						<p>Organic Information</p>
-						<h1>News Article</h1>
+						<p>Information</p>
+						<h1>Pelanggan</h1>
 					</div>
 				</div>
 			</div>
@@ -34,6 +34,51 @@
 	</div>
 	<!-- end breadcrumb section -->
 
+	<!-- tabel daftar barang -->
+	
+	<div class="mt-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="section-title">
+						<h3>Informasi <span class="orange-text">Pelanggan</span></h3>
+						<p>Jadilah Pelanggan kami dengan mulai membeli buah di kami</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="daftar pelanggan">
+      <div class="container">
+        <div class="row">
+          <table class="table table-bordered">
+		        <thead>
+			        <tr>
+              		  <th>id</th>
+				      <th>Nama</th>
+				      <th>Alamat</th>
+					  <th>Jenis Kelamin</th>	
+              		  <th>Email</th>
+					  <th>Nomor Telepon</th>		
+			        </tr>
+		        </thead>
+		        <tbody>
+            @foreach($daftar as $d)
+			        <tr>
+					  <td>{{ $d->id }}</td>
+				      <td>{{ $d->Nama }}</td>
+              		  <td>{{ $d->Alamat }}</td>
+					  <td>{{ $d->JenisKelamin}}</td>
+					  <td>{{ $d->Email }}</td>
+              		  <td>{{ $d->Nomor }}</td>
+			        </tr>
+            @endforeach
+		        </tbody>
+	        </table>
+        </div>
+    </div>
+</div>
+<!-- end tabel daftar barang -->
 	<!-- latest news -->
 	<div class="latest-news mt-150 mb-150">
 		<div class="container">
