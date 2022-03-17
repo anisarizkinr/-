@@ -39,9 +39,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 mb-5 mb-lg-0">
-					<div class="form-title">
-						<h2>Data Pegawai</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ratione! Laboriosam est, assumenda. Perferendis, quo alias quaerat aliquid. Corporis ipsum minus voluptate? Dolore, esse natus!</p>
+				<div class="section-title">
+						<h3>Daftar<span class="orange-text">Pegawai</span></h3>
+						<h4>Berikut merupakan daftar Pegawai Kami</h4>
 					</div>
 				 	
 

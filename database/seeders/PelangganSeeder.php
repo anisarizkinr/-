@@ -18,42 +18,42 @@ class PelangganSeeder extends Seeder
             [
                 'Nama' => 'Anis Purwanti',
                 'Alamat' => 'Mojokerto',
-                'Jenis Kelamin' => 'Perempuan',
+                'JenisKelamin' => 'Perempuan',
                 'Email' => 'Anis1010@gmail.com',
                 'Nomor' => '085334120890'
             ],
             [
                 'Nama' => 'Diki Dermawan',
                 'Alamat' => 'Malang',
-                'Jenis Kelamin' => 'Laki Laki',
+                'JenisKelamin' => 'Laki Laki',
                 'Email' => 'Dermawan@gmail.com',
                 'Nomor' => '081297233010'
             ],
             [
                 'Nama' => 'Selly Aulia',
                 'Alamat' => 'Malang',
-                'Jenis Kelamin' => 'Perempuan',
+                'JenisKelamin' => 'Perempuan',
                 'Email' => 'Selly@gmail.com',
                 'Nomor' => '081239888008'
             ],
             [
                 'Nama' => 'Andi Wiranto',
                 'Alamat' => 'Pasuruan',
-                'Jenis Kelamin' => 'Laki Laki',
+                'JenisKelamin' => 'Laki Laki',
                 'Email' => 'Andi01@gmail.com',
                 'Nomor' => '081334557120'
             ],
             [
                 'Nama' => 'Risma Purwarida',
                 'Alamat' => 'Gresik',
-                'Jenis Kelamin' => 'Perempuan',
+                'JenisKelamin' => 'Perempuan',
                 'Email' => 'RiRis@gmail.com',
                 'Nomor' => '082334100879'
             ],
             [
                 'Nama' => 'Eko Danil',
                 'Alamat' => 'Lawang',
-                'Jenis Kelamin' => 'Laki Laki',
+                'JenisKelamin' => 'Laki Laki',
                 'Email' => 'Eko10@gmail.com',
                 'Nomor' => '081390008790'
             ]
