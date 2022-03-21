@@ -12,4 +12,10 @@ class SupplierController extends Controller
         $data = supplier::all();
         return view('blog.supplier', ['title'=> 'Supplier' , 'isi' => $data]);
     }
+
+    public function supplier1(){
+        $data = supplier::paginate(3);
+        return view('blog.supplier',['title'=> 'Supplier','isi'=> $data]);
+    }
+
 }

@@ -27,3 +27,4 @@ Route::get('/pelanggan',[PelangganController::class, 'pelanggan']);
 Route::get('/pelanggan1',[PelangganController::class, 'pelanggan1']);
 Route::get('/pegawai',[PegawaiController::class, 'pegawai']);
 Route::get('/supplier',[SupplierController::class, 'supplier']);
+Route::get('/supplier1',[SupplierController::class, 'supplier1']);
