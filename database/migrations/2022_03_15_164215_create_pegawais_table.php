@@ -17,7 +17,7 @@ class CreatePegawaisTable extends Migration
             $table->id();
             $table->string('NIK', 50);
             $table->string('Nama', 255);
-            $table->text('JK');
+            $table->boolean('JK');
             $table->string('Alamat', 255);
             $table->string('Level', 255);
             $table->string('Jabatan', 255);
