@@ -16,7 +16,7 @@
 							<ul>
 								<li class="current-list-item"><a href="{{url('/home')}}">Home</a>
 								</li>
-								<li><a href="{{url('/barang')}}">Barang</a></li>
+								<li><a href="{{url('/index')}}">Mahasiswa</a></li>
 								<li><a href="{{url('/pelanggan')}}">Pelanggan</a>
 								</li>
 								<li><a href="{{url('/pegawai')}}">Pegawai</a></li>
