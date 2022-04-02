@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\TampilController;
 use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,4 @@ Route::get('/home',[PageController::class, 'home']);
 // 
 
 Route::resource('mahasiswa', MahasiswaController::class);
+Route::get('search', [MahasiswaController::class,'search'])->name('search');

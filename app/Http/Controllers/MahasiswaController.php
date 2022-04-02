@@ -12,9 +12,10 @@ class MahasiswaController extends Controller
     public function index()
     {
         //fungsi eloquent menampilkan data menggunakan pagination
-        $mahasiswa = $mahasiswa = DB::table('mahasiswa')->get(); // Mengambil semua isi tabel
-        $posts = Mahasiswa::orderBy('nim', 'desc')->paginate(6);
-        return view('mahasiswa.index', compact('mahasiswa'))->with('i', (request()->input('page', 1) - 1) * 5);
+       // $mahasiswa = $mahasiswa = DB::table('mahasiswa')->get(); // Mengambil semua isi tabel
+       $mahasiswa = Mahasiswa::paginate(3); 
+       $posts = Mahasiswa::orderBy('nim', 'desc')->paginate(3);
+        return view('mahasiswa.index', compact('mahasiswa'))->with('i', (request()->input('page', 1) - 1) * 3);
     }
 
     public function create()
@@ -30,6 +31,9 @@ class MahasiswaController extends Controller
             'nama' => 'required',
             'kelas' => 'required',
             'jurusan' => 'required', 
+            'email' => 'required',
+            'alamat' => 'required',
+            'tgl_lahir' => 'required', 
             ]);
 
         //fungsi eloquent untuk menambah data
@@ -61,6 +65,9 @@ class MahasiswaController extends Controller
             'nama' => 'required',
             'kelas' => 'required',
             'jurusan' => 'required',
+            'email' => 'required',
+            'alamat' => 'required',
+            'tgl_lahir' => 'required',
         ]);
         Mahasiswa::where('id_mahasiswa', $mahasiswa->id_mahasiswa)->update($validateData);
         return redirect()->route('mahasiswa.index')->with('success', 'Data berhasil diubah');
@@ -69,5 +76,12 @@ class MahasiswaController extends Controller
     {
         Mahasiswa::where('id_mahasiswa', $mahasiswa->id_mahasiswa)->delete();
         return redirect()->route('mahasiswa.index')->with('success', 'Data berhasil dihapus');
+    }
+
+
+    public function search(Request $request){
+        $keyword = $request -> search;
+        $mahasiswa = Mahasiswa::where('nama','like',"%". $keyword . "%") -> paginate(3);
+        return view(view: 'mahasiswa.index', data: compact( var_name:'mahasiswa'));
     }
 };

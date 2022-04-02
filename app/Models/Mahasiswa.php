@@ -22,9 +22,12 @@ class Mahasiswa extends Model //Definisi Model
         'nama',
         'kelas',
         'jurusan',
+        'email',
+        'alamat',
+        'tgl_lahir',
     ];
     public function getRouteKeyName()
     {
-        return 'nim';
+       // return 'nim';
     }
 };
