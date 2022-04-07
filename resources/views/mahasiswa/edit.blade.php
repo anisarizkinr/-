@@ -19,40 +19,45 @@
                 </ul>
             </div>
             @endif
-            <form method="post" action="{{ route('mahasiswa.update', $Mahasiswa->nim) }}" id="myForm">
+            <form method="post" action="{{ route('mahasiswa.update', $mahasiswa->nim) }}" id="myForm">
                 @csrf
                 @method('PUT')
                 <div class="form-group">
-                    <label for="Nim">Nim</label> 
-                    <input type="text" name="nim" class="form-control" id="Nim" value="{{ $Mahasiswa->nim }}" aria-describedby="Nim" > 
+                    <label for="nim">Nim</label> 
+                    <input type="text" name="nim" class="form-control" id="nim" value="{{ $mahasiswa->nim }}" aria-describedby="nim" > 
                 </div>
                 <div class="form-group">
-                    <label for="Nama">Nama</label> 
-                    <input type="text" name="nama" class="form-control" id="Nama" value="{{ $Mahasiswa->nama }}" aria-describedby="Nama" > 
+                    <label for="nama">Nama</label> 
+                    <input type="text" name="nama" class="form-control" id="nama" value="{{ $mahasiswa->nama }}" aria-describedby="nama" > 
                 </div>
                 <div class="form-group">
-                    <label for="Kelas">Kelas</label> 
-                    <input type="kelas" name="kelas" class="form-control" id="Kelas" value="{{ $Mahasiswa->kelas }}" aria-describedby="Kelas" > 
+                    <label for="kelas">Kelas</label> 
+                    <select name="kelas" class="form-control" name="kelas">
+                        @foreach($kelas as $kls)
+                            <option value="{{$kls->id}}" {{ $mahasiswa->kelas_id == $kls->id ? 'selected' : '' }}>{{$kls->nama_kelas}}</option>
+                        @endforeach
+                        </select>
+               
                 </div>
                 <div class="form-group">
-                    <label for="Jurusan">Jurusan</label> 
-                    <input type="Jurusan" name="jurusan" class="form-control" id="Jurusan" value="{{ $Mahasiswa->jurusan }}" aria-describedby="Jurusan" > 
+                    <label for="jurusan">Jurusan</label> 
+                    <input type="jurusan" name="jurusan" class="form-control" id="jurusan" value="{{ $mahasiswa->jurusan }}" aria-describedby="jurusan" > 
                 </div>
+              
                 <div class="form-group">
-                        <label for="Jurusan">Email</label>
-                        <input type="Jurusan" name="email" class="form-control" id="Jurusan"
-                            value="{{ $Mahasiswa->email }}" aria-describedby="Jurusan">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" class="form-control" id="email"   value="{{ $mahasiswa->email }}" aria-describedby="email">
                 </div>
                 <div class="form-group">
                     <label for="Jurusan">Alamat</label>
-                    <input type="Jurusan" name="alamat" class="form-control" id="Jurusan"
-                        value="{{ $Mahasiswa->alamat }}" aria-describedby="Jurusan">
+                    <input type="Jurusan" name="alamat" class="form-control" id="Jurusan" value="{{ $mahasiswa->alamat }}" aria-describedby="Jurusan">
                 </div>
-                <div class="form-group">
-                    <label for="Jurusan">Tanggal lahir</label>
-                    <input type="date" name="tgl_lahir" class="form-control" id="Jurusan"
-                        value="{{ $Mahasiswa->tgl_lahir }}" aria-describedby="Jurusan">
-                </div>
+
+                <!-- <div class="form-group">
+                    <label for="tgl_lahir">Tanggal lahir</label>
+                    <input type="date" name="tgl_lahir" class="form-control" id="tgl_lahir" value="{{ $mahasiswa->tgl_lahir }}" aria-describedby="tgl_lahir">
+                </div> -->
+
 
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
