@@ -41,7 +41,7 @@ class MahasiswaController extends Controller
             'jurusan' => 'required', 
             'email' => 'required',
             'alamat'=> 'required',
-            // 'tgl_lahir' => 'required',
+             'tgl_lahir' => 'required',
             ]);
 
             $mahasiswa = new Mahasiswa;
@@ -50,7 +50,7 @@ class MahasiswaController extends Controller
             $mahasiswa->jurusan = $request->get('jurusan');
             $mahasiswa->email = $request->get('email');
             $mahasiswa->alamat = $request->get('alamat');
-            // $mahasiswa->tgl_lahir = $request->get('tgl_lahir');
+             $mahasiswa->tgl_lahir = $request->get('tgl_lahir');
             //$mahasiswa->save();
 
             $kelas = new Kelas;
@@ -92,7 +92,7 @@ class MahasiswaController extends Controller
             'jurusan' => 'required',
             'email' => 'required',
             'alamat' => 'required',
-            // 'tgl_lahir' => 'tgl_lahir',
+            'tgl_lahir' => 'required',
             
         ]);
         $mahasiswa = Mahasiswa::with('kelas')->where('nim', $nim)->first();
@@ -101,7 +101,7 @@ class MahasiswaController extends Controller
         $mahasiswa->jurusan = $request->get('jurusan');
         $mahasiswa->email = $request->get('email');
         $mahasiswa->alamat = $request->get('alamat');
-        // $mahasiswa->tgl_lahir = $request->get('tgl_lahir');
+         $mahasiswa->tgl_lahir = $request->get('tgl_lahir');
        // $mahasiswa->save();
 
        $kelas = new Kelas;
@@ -124,9 +124,18 @@ class MahasiswaController extends Controller
     }
 
 
+    
+
     public function search(Request $request){
         $keyword = $request -> search;
-        $mahasiswa = Mahasiswa::where('nama','like',"%". $keyword . "%") -> paginate(3);
-        return view(view: 'mahasiswa.index', data: compact( var_name:'mahasiswa'));
+        // $mahasiswa = Mahasiswa::where('nama','like',"%". $keyword . "%") -> paginate(3);
+        // return view(view: 'mahasiswa.index', data: compact( var_name:'mahasiswa'));
+        $paginate = Mahasiswa::where('nama','like',"%". $keyword . "%") -> paginate(3);
+        return view(view: 'mahasiswa.index', data: compact( var_name:'paginate'));
+    }
+
+    public function nilai($nim){
+        $nilai = Mahasiswa::with('kelas', 'matakuliah')->find($nim);
+            return view('mahasiswa.nilai', compact('nilai'));
     }
 };

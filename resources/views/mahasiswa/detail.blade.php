@@ -16,8 +16,8 @@
                         <li class="list-group-item"><b>Jurusan: </b>{{ $mahasiswa->jurusan }}
                         <li class="list-group-item"><b>Email: </b>{{ $mahasiswa->email }}
                         <li class="list-group-item"><b>Alamat: </b>{{ $mahasiswa->alamat }}
-                       <!-- // <li class="list-group-item"><b>Tanggal Lahir: </b>{{ $mahasiswa->tgl_lahir }}
-                         -->
+                       <li class="list-group-item"><b>Tanggal Lahir: </b>{{ $mahasiswa->tgl_lahir }}
+                        
                     </ul>
                 </div>
                 <a class="btn btn-success mt-3" href="{{ route('mahasiswa.index') }}">Kembali</a>

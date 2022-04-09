@@ -41,7 +41,7 @@
             <th>Jurusan</th>
             <th>Email</th>
             <th>Alamat</th>
-            <!-- <th>Tanggal Lahir</th> -->
+            <th>Tanggal Lahir</th>
             
             
             <th width="280px">Action</th>
@@ -56,13 +56,15 @@
 
                 <td>{{ $mhs->email }}</td>
                 <td>{{ $mhs->alamat }}</td>
-                <!-- <td>{{ $mhs->tgl_lahir }}</td> -->
+                <td>{{ $mhs->tgl_lahir }}</td>
                 <td>
                     <form action="{{ route('mahasiswa.destroy', ['mahasiswa' => $mhs->nim]) }}" method="POST">
 
                         <a class="btn btn-info" href="{{ route('mahasiswa.show', $mhs->nim) }}">Show</a>
 
                         <a class="btn btn-primary" href="{{ route('mahasiswa.edit', $mhs->nim) }}">Edit</a>
+
+                        <a class="btn btn-warning" href="{{ route('mahasiswa.nilai', $mhs->nim) }}">Nilai</a>
 
                         @csrf
                         @method('DELETE')

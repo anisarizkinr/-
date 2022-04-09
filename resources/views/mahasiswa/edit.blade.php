@@ -53,10 +53,10 @@
                     <input type="Jurusan" name="alamat" class="form-control" id="Jurusan" value="{{ $mahasiswa->alamat }}" aria-describedby="Jurusan">
                 </div>
 
-                <!-- <div class="form-group">
+                <div class="form-group">
                     <label for="tgl_lahir">Tanggal lahir</label>
                     <input type="date" name="tgl_lahir" class="form-control" id="tgl_lahir" value="{{ $mahasiswa->tgl_lahir }}" aria-describedby="tgl_lahir">
-                </div> -->
+                </div>
 
 
                 <button type="submit" class="btn btn-primary">Submit</button>

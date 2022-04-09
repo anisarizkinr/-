@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use App\Models\Mahasiswa_MataKuliah;
+use Illuminate\Foundation\Auth\Mahasiswa as Authenticatable;
+
+
+class Mahasiswa_MataKuliah extends Model
+{
+    use HasFactory;
+    protected $table = 'mahasiswa_matakuliah';
+    protected $fillable = [
+        'mahasiswa_nim',
+        'kelas_id',
+        'nilai',
+    ];
+}

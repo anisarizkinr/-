@@ -53,10 +53,10 @@
                             <label for="alamat">Alamat</label>
                             <input type="alamat" name="alamat" class="form-control" id="alamat" aria-describedby="alamat">
                         </div>
-                        <!-- <div class="form-group">
+                        <div class="form-group">
                             <label for="tgl_lahir">Tanggal Lahir</label>
                             <input type="date" name="tgl_lahir" class="form-control" id="tgl_lahir" aria-describedby="tgl_lahir">
-                        </div> -->
+                        </div>
 
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
