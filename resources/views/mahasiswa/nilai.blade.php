@@ -1,35 +1,44 @@
+
+   
 @extends('mahasiswa.layout')
+
 @section('content')
     <div class="row">
-        <div class="col-12 text-center">
-            <h3><strong>KARTU HASIL STUDI (KHS)</strong></h3>
-        </div>
-        <div class="col-12 my-4">
-            <p class="m-0"><strong>Nama:</strong> {{ $nilai->nama }}</p>
-            <p class="m-0"><strong>NIM:</strong> {{ $nilai->nim }}</p>
-            <p class="m-0"><strong>Kelas:</strong> {{ $nilai->kelas->nama_kelas }}</p>
-
-        </div>
-        <div class="col-12">
-            <table class="table table-bordered">
-                <tr>
-                    <th>Mata Kuliah</th>
-                    <th>SKS</th>
-                    <th>Semester</th>
-                    <th>Nilai</th>
-                </tr>
-                @foreach ($nilai->matakuliah as $nilai)
-                    <tr>
-                        <td>{{$nilai->nama_matkul}}</td>
-                        <td>{{$nilai->sks}}</td>
-                        <td>{{$nilai->semester}}</td>
-                        <td>{{$nilai->pivot->nilai}}</td>
-                    </tr>
-                @endforeach
-                </table>
+        <div class="col-lg-12 margin-tb">
+            <div class="pull-left mt-2">
+                <h2 align="center">JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h2>
+                <br>
+                <h1 align="center">KARTU HASIL STUDI (KHS)</h1>
             </div>
-        </ul>
+            <br><br>
+            <div class="float-left my-2">
+                <p><strong>Nama :</strong> {{ $nilai->nama }}</p>
+                <p><strong>NIM :</strong> {{ $nilai->nim }}</p>
+                <p><strong>Kelas :</strong> {{ $nilai->kelas->nama_kelas }}</p>
+            </div>
+        </div>
+    </div>
 
-        <a class="btn btn-success mt-3" href="{{ route('mahasiswa.index') }}">Kembali</a>
-</div>
-@endsection 
+    <table class="table table-bordered mt-3">
+        <tr>
+            <th><strong>Mata Kuliah</strong></th>
+            <th><strong>SKS</strong></th>
+            <th><strong>Semester</strong></th>
+            <th><strong>Nilai</strong></th>
+        </tr>
+        @foreach($nilai->matakuliah as $score)
+        <tr>
+            <td>{{$score->nama_matkul}}</td>
+            <td>{{$score->sks}}</td>
+            <td>{{$score->semester}}</td>
+            <td>{{$score->pivot->nilai}}</td>
+        </tr>
+        @endforeach
+    </table>
+
+    <br>
+    <a class="btn btn-danger btn-block" style="float: left;" href="{{ route('mahasiswa.cetak_pdf', $nilai->nim) }}">Cetak PDF</a>
+    <div class="float-right my-2">
+        <a class="btn btn-success mt-3" style="float: right;" href="{{ route('mahasiswa.index') }}">Kembali</a>
+    </div>
+@endsection

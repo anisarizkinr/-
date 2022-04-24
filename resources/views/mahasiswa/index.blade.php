@@ -37,12 +37,12 @@
         <tr>
             <th>Nim</th>
             <th>Nama</th>
+            <th>Foto</th>
             <th>Kelas</th>
             <th>Jurusan</th>
             <th>Email</th>
             <th>Alamat</th>
             <th>Tanggal Lahir</th>
-            
             
             <th width="280px">Action</th>
         </tr>
@@ -51,6 +51,7 @@
             <tr>
                 <td>{{ $mhs->nim }}</td>
                 <td>{{ $mhs->nama }}</td>
+                <td><img width="120px" height="180" src="{{ asset('storage/' . $mhs->foto ) }}"></td>
                 <td>{{ $mhs->kelas->nama_kelas }}</td>
                 <td>{{ $mhs->jurusan }}</td>
 
@@ -76,6 +77,20 @@
         @endforeach
     </table>
    
-   {{ $paginate -> links()}}
+    <div>
+        <p>Showing
+        {{$paginate->firstItem()}}
+        to
+        {{$paginate->lastItem()}}
+        of
+        {{$paginate->total()}}
+        entries</p>
+     </div>
+    <div class="float-right my-2">
+        {{$paginate->links()}}
+    </div>
+
+
+   <!-- {{ $paginate -> links()}} -->
  
 @endsection

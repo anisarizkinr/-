@@ -19,7 +19,7 @@
                 </ul>
             </div>
             @endif
-            <form method="post" action="{{ route('mahasiswa.update', $mahasiswa->nim) }}" id="myForm">
+            <form method="post" action="{{ route('mahasiswa.update', $mahasiswa->nim) }}" id="myForm" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="form-group">
@@ -30,6 +30,13 @@
                     <label for="nama">Nama</label> 
                     <input type="text" name="nama" class="form-control" id="nama" value="{{ $mahasiswa->nama }}" aria-describedby="nama" > 
                 </div>
+
+                <div class="form-group">
+                            <label for="foto">Foto</label>
+                            <input type="file" class="form-control" name="foto" id="foto" value="{{ $mahasiswa->foto }}"><br>
+                            <center><img width="150px" src="{{ asset('storage/' . $mahasiswa->foto) }}"></center>
+                        </div>
+
                 <div class="form-group">
                     <label for="kelas">Kelas</label> 
                     <select name="kelas" class="form-control" name="kelas">
